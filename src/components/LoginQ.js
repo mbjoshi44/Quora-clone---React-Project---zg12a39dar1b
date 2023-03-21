@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link , useNavigate } from "react-router-dom";
 import '../styles/App.css';
-import quoralogo from '../images/quora-logo1.png'
+import quoralogo from '../images/quora_logo1.png'
 
 function LoginQ(){
     let initialData = {

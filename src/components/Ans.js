@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import quoralogo from '../images/quora-logo1.png'
+import quoralogo from '../images/quora_logo1.png'
 import questionAndAnswers from "./data";
 function Ans() {
     const [selectedQuestion, setSelectedQuestion] = useState("");

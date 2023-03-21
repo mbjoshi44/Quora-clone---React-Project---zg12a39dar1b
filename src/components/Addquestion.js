@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import quoralogo from '../images/quora-logo1.png'
+import quoralogo from '../images/quora_logo1.png'
 import questionAndAnswers from "./data";
 import { Link, useNavigate } from "react-router-dom";
 function Addquestion() {

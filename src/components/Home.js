@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../styles/App.css';
 
-import quoralogo from '../images/quora-logo1.png'
+import quoralogo from '../images/quora_logo1.png'
 import { Link } from "react-router-dom";
 import questionAndAnswers from "./data";
 
