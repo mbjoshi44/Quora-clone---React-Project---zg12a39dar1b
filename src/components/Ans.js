@@ -61,6 +61,7 @@ function Ans() {
         </select>
         <label htmlFor="answer">Answer:</label>
         <textarea
+        
           id="answer"
           value={answer}
           onChange={(event) => setAnswer(event.target.value)}

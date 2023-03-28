@@ -55,6 +55,7 @@ function AddQuestion() {
           placeholder="Type Your Question here ....."
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
+          autoComplete="off"
         />
         <div className="button-container">
           <button type="submit">Add Question</button>

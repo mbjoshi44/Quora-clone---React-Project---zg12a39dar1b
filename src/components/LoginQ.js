@@ -87,9 +87,9 @@ function LoginQ(){
              <br></br>
              <div className="form">
             
-             Username: <input type="text" id="username" onChange={updateData} value={loginformdata.username} required/><br></br>
+             Username: <input type="text" id="username" onChange={updateData} value={loginformdata.username} required autoComplete="off"/><br></br>
  
-           Password: <input type="password" id="password" onChange={updateData} value={loginformdata.password}  required/><br></br><br></br>
+           Password: <input type="password" id="password" onChange={updateData} value={loginformdata.password}  required  /><br></br><br></br>
                      <button type='submit'  onClick={loginFn}>Login</button>
               
                      {loginstatus && <div class="alert alert-success" role="alert">
