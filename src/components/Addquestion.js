@@ -1,63 +1,71 @@
-import React, { useEffect, useState } from "react";
-import quoralogo from '../images/quora_logo1.png'
+import React, { useState } from "react";
+import "../styles/addQ.css";
+import { useNavigate } from "react-router-dom";
 import questionAndAnswers from "./data";
-import { Link, useNavigate } from "react-router-dom";
-function Addquestion() {
+import quoralogo from '../images/quora_logo1.png'
 
+function AddQuestion() {
   const [question, setQuestion] = useState("");
   const navigate = useNavigate();
 
-  const handleAddQuestion = (event) => {
+  function handleAddQuestion(event) {
     event.preventDefault();
     if (question.trim() === "") {
       window.alert("Do not add empty questions.");
-      return; // do not add empty questions
+      return; 
     }
+
+    var users = JSON.parse(localStorage.getItem("users"))
     const newQuestion = {
       id: questionAndAnswers.length + 1,
-      answeredBy: "",
-      questionedBy: "",
+      answeredBy: "xyz zbd",
+      questionedBy: "fjdd dnn",
       question: question.trim(),
       answers: [],
+      username: `${users[users.length-1].username}`,
+      src: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 99) + 1}.jpg` 
     };
-    questionAndAnswers.push(newQuestion);
-   // console.log(questionAndAnswers)
-    setQuestion(""); // clear input field
-    navigate("/home"); // redirect to main page
-
-
+     questionAndAnswers.push(newQuestion);
+    setQuestion(""); 
+    alert("Your Queston Added Succesfully")
+    navigate("/home")
+  
   }
   
-  
- 
 
+  const handleCancel = () => {
+    
+    navigate("/home");
+  };
 
   return (
     <>
-      <div className="home">
-        <img src={quoralogo} />
-      </div>
-
-      <div className="addQue ">
-        <form onSubmit={handleAddQuestion}>
-          QUESTION:<input className="input_text"
-            type="text"
-            id="question"
-            placeholder="Type Your Question here ....."
-            value={question}
-            onChange={(event) => setQuestion(event.target.value)}
-          />
-          <div className="btn">
-            <span className="nav-item">  <button type="submit">Add question </button></span>
-            <span className="nav-item"> <Link to="/home">
-              <button type="submit">Cancel</button>
-            </Link></span>
-          </div>
-
-        </form>
-      </div>
+    <div className="home">
+                <img src={quoralogo} />
+            </div>
+    <div className="add-question">
+    
+      <h2>Add Question</h2>
+      <form onSubmit={handleAddQuestion}>
+        <label htmlFor="question">Question:</label>
+        <input
+          className="input_text"
+          type="text"
+          id="question"
+          placeholder="Type Your Question here ....."
+          value={question}
+          onChange={(event) => setQuestion(event.target.value)}
+        />
+        <div className="button-container">
+          <button type="submit">Add Question</button>
+          <button type="submit" onClick={handleCancel}>
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
     </>
   );
 }
 
-export default Addquestion
+export default AddQuestion;

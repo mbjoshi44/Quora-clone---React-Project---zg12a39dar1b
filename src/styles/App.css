@@ -12,105 +12,6 @@
     padding: 20px;
 }
 
-
-.home input[type="text"]{
-    width:28%;
-    height: 65px;
-    padding: 20px;
-    border: none;
-    margin-top: 10px;
-    margin-left: 20px;
-    color: black;
-    border-radius: 9px;
-    font-size: large;
-    background-color: #ccc;
-}
-
-
-.nav-item{
-    background-color: red;
-    border-radius: 8px;
-    padding: 5px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    /* text-decoration: none; */
-   /* font-size: 2rem; */
-   
-}
-
-.nav-item li{
-    
-    font-weight: 500; 
-    color: white;
-    font-style: bold;
-
-    
-    text-decoration: none;
-    
-    list-style: none;
-}
-
-/* QUESTION AND ANSWER CSS START HERE */
-
-.quesAns1{
-    display: flex;
-    background-color:#ccc ;
-}
-
-.quesAns{
-    display: flex;
-    flex-direction: column;
-   
-    width: 50%;
-
-    background-color:#ccc ;
-}
-
-.quinside{
-    background-color: white;
-    color: black;
-    width: 90%;
-    justify-content: space-between;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-}
-.quinside h2{
-    font-size: 2.5rem;
-    padding: 10px;
-}
-.quinside h3{
-    font-size: 2rem;
-    padding: 5px;
-}
-.quinside p{
-    font-size: 1.5rem;
-    padding: 5px;
-}
-
-/* ADD QUESTION CSS */
-.addQue{
-    background-color: #ccc;
-    color:white;
-    font-size: 2rem;
-    height: 800px;
-    padding-top: 20px;
-    
-}
-
-
-.addQue input[type="text"]{
-    width: 80%;
-    height: 50px;
-    border: none;
-}
-
-
-
 /* For login page */
 
 
@@ -124,14 +25,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-label {
+  .form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
     color: #333;
 }
 
- input[type="email"],  input[type="password"],input[type="text"] {
+   .form input[type="email"],  input[type="password"],input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -150,47 +51,5 @@ button[type="submit"] {
     font-size: 1.6rem;
 }
 
-/* button[type="submit"]:hover {
-    background-color: #7e1313;
-} */
 
 
-
-.btn{
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 120px;
-}
-
-
-
-.loginnew{
-    text-align: center;
-}
-
-
-
-/* ANSWER PAGE */
-.quee{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.qList{
-
-    width: 30%;
-    background-color: white;
-    margin-top: 100px;
-    margin-left: 20px;
-    color: black;
-}
-
-.ansList{
-    height: 200px;
-    width: 50%;
-    background-color: white;
-    color: #ccc;
-    margin-top: 100px;
-    margin-left: 20px;
-}
